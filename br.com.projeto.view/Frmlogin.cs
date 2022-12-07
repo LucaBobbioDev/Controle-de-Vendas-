@@ -22,9 +22,8 @@ namespace Projeto_Controle_Vendas.br.com.projeto.view
         {
             FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
 
-            if(funcionarioDAO.efetuarLogin(txtemail.Text, txtsenha.Text))
+            if(funcionarioDAO.efetuarLogin(txtemail.Text, txtsenha.Text) == true)
             {
-               
                 this.Hide();
             }
         }

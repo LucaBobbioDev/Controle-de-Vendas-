@@ -48,6 +48,7 @@
             this.menuHistorico = new System.Windows.Forms.ToolStripMenuItem();
             this.menuConfig = new System.Windows.Forms.ToolStripMenuItem();
             this.menuTrocarUsuarios = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuSair = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.txtdata = new System.Windows.Forms.ToolStripStatusLabel();
@@ -56,7 +57,6 @@
             this.toolStripStatusLabel5 = new System.Windows.Forms.ToolStripStatusLabel();
             this.txtusuario = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.menuSair = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -214,6 +214,13 @@
             this.menuTrocarUsuarios.Text = "Trocar Usuários";
             this.menuTrocarUsuarios.Click += new System.EventHandler(this.trocarUsuáriosToolStripMenuItem_Click);
             // 
+            // menuSair
+            // 
+            this.menuSair.Name = "menuSair";
+            this.menuSair.Size = new System.Drawing.Size(198, 26);
+            this.menuSair.Text = "Sair ";
+            this.menuSair.Click += new System.EventHandler(this.menuSair_Click);
+            // 
             // statusStrip1
             // 
             this.statusStrip1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -274,13 +281,6 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // menuSair
-            // 
-            this.menuSair.Name = "menuSair";
-            this.menuSair.Size = new System.Drawing.Size(198, 26);
-            this.menuSair.Text = "Sair ";
-            this.menuSair.Click += new System.EventHandler(this.menuSair_Click);
-            // 
             // Frmmenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -308,10 +308,8 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem menuClientes;
         private System.Windows.Forms.ToolStripMenuItem menuCadastroDeClientes;
         private System.Windows.Forms.ToolStripMenuItem menuConsultaDeClientes;
-        private System.Windows.Forms.ToolStripMenuItem menuFuncionarios;
         private System.Windows.Forms.ToolStripMenuItem menuCadastroDeFuncionarios;
         private System.Windows.Forms.ToolStripMenuItem menuConsultaDeFuncionarios;
         private System.Windows.Forms.ToolStripMenuItem menuFornecedores;
@@ -334,5 +332,7 @@
         public System.Windows.Forms.ToolStripStatusLabel txtusuario;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ToolStripMenuItem menuSair;
+        public System.Windows.Forms.ToolStripMenuItem menuClientes;
+        public System.Windows.Forms.ToolStripMenuItem menuFuncionarios;
     }
 }

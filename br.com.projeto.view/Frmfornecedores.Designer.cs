@@ -536,6 +536,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Frmfornecedores";
             this.Text = "Cadastro de Fornecedores";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Frmfornecedores_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

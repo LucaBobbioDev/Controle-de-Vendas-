@@ -270,6 +270,7 @@ namespace Projeto_Controle_Vendas.br.com.projeto.dao
                 executeCmd.Parameters.AddWithValue("@senha", senha);
 
                 conexao.Open();
+
                 MySqlDataReader reader = executeCmd.ExecuteReader();
 
                 if (reader.Read())
@@ -284,13 +285,14 @@ namespace Projeto_Controle_Vendas.br.com.projeto.dao
 
                     telaMenu.txtusuario.Text = nome;
 
-                    if (nivel.Equals("Adminstrador"))
+                    if (nivel.Equals("Administrador"))
                     {
                         telaMenu.Show();
                     }
                     else if (nivel.Equals("Usuário"))
                     {
-                        telaMenu.menuProdutos.Visible = false;
+                        telaMenu.menuClientes.Visible = false;
+                        telaMenu.menuFuncionarios.Visible = false;
                         telaMenu.Show();
                     }
                     return true;

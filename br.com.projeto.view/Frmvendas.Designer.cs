@@ -394,6 +394,7 @@ namespace Projeto_Controle_Vendas.br.com.projeto.view
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Frmvendas";
             this.Text = "Vendas de Produtos";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Frmvendas_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

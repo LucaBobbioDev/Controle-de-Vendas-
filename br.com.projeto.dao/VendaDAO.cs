@@ -147,7 +147,7 @@ namespace Projeto_Controle_Vendas.br.com.projeto.dao
             catch (Exception error)
             {
                 MessageBox.Show("Ocorreu o seguinte erro:" + error);
-                throw;
+                return null;
             }
         }
         #endregion

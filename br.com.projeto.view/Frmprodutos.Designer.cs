@@ -346,6 +346,7 @@ namespace Projeto_Controle_Vendas.br.com.projeto.view
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Frmprodutos";
             this.Text = "Cadastros de Produtos";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Frmprodutos_Load);
             this.tabProdutos.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
