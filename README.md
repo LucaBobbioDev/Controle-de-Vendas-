@@ -13,3 +13,9 @@ O Controle de Vendas Desktop com C# e MySQL é um aplicativo desktop desenvolvid
  - Luca Bobbio 
  
  - Nelson Bispo de Oliveira
+ 
+ ## Vídeo Demonstrativo
+
+
+https://user-images.githubusercontent.com/95222294/206216173-96dd5f89-79e2-4058-876a-8ed03fd61843.mp4
+
