@@ -26,7 +26,7 @@ namespace Projeto_Controle_Vendas.br.com.projeto.view
 
         private void Btnsalvar_Click(object sender, EventArgs e)
         {
-            // 1 passo - Receber os dados dentro do objeto modelo de cliente
+            //Receber os dados dentro do objeto modelo de funcionário
             Funcionario obj = new Funcionario();
 
 
@@ -47,40 +47,7 @@ namespace Projeto_Controle_Vendas.br.com.projeto.view
             obj.nivel_acesso = cbnivel.Text;
             obj.cargo = cbcargo.Text;
 
-            obj.codigo = int.Parse(txtcodigo.Text);
-
-            //2 passo - Criar um objeto da classe ClienteDAO e chamar o metodo cadastraCliente
-            FuncionarioDAO dao = new FuncionarioDAO();
-            dao.alterarFuncionario(obj);
-
-            //recarregar o datagridview
-            tabelaFuncionarios.DataSource = dao.listarFuncionarios();
-        }
-
-        private void Btneditar_Click(object sender, EventArgs e)
-        {
-            // 1 passo - Receber os dados dentro do objeto modelo de cliente
-            Funcionario obj = new Funcionario();
-
-
-            obj.nome = txtnome.Text;
-            obj.rg = txtrg.Text.Replace(",", ".");
-            obj.cpf = txtcpf.Text.Replace(",", ".");
-            obj.senha = txtsenha.Text;
-            obj.email = txtemail.Text;
-            obj.telefone = txttelefone.Text;
-            obj.celular = txtcelular.Text;
-            obj.cep = txtcep.Text;
-            obj.endereco = txtendereco.Text;
-            obj.numero = int.Parse(txtnumero.Text);
-            obj.complemento = txtcomp.Text;
-            obj.bairro = txtbairro.Text;
-            obj.cidade = txtcidade.Text;
-            obj.estado = cbuf.Text;
-            obj.nivel_acesso = cbnivel.Text;
-            obj.cargo = cbcargo.Text;
-
-            //2 passo - Criar um objeto da classe ClienteDAO e chamar o metodo cadastraCliente
+            //Criar um objeto da classe FuncionárioDAO e chamar o metodo cadastraFuncionário
             FuncionarioDAO dao = new FuncionarioDAO();
             dao.cadastrarFuncionario(obj);
 
@@ -88,16 +55,49 @@ namespace Projeto_Controle_Vendas.br.com.projeto.view
             tabelaFuncionarios.DataSource = dao.listarFuncionarios();
         }
 
+        private void Btneditar_Click(object sender, EventArgs e)
+        {
+            //Receber os dados dentro do objeto modelo de funcionário
+            Funcionario obj = new Funcionario();
+
+
+            obj.nome = txtnome.Text;
+            obj.rg = txtrg.Text.Replace(",", ".");
+            obj.cpf = txtcpf.Text.Replace(",", ".");
+            obj.senha = txtsenha.Text;
+            obj.email = txtemail.Text;
+            obj.telefone = txttelefone.Text;
+            obj.celular = txtcelular.Text;
+            obj.cep = txtcep.Text;
+            obj.endereco = txtendereco.Text;
+            obj.numero = int.Parse(txtnumero.Text);
+            obj.complemento = txtcomp.Text;
+            obj.bairro = txtbairro.Text;
+            obj.cidade = txtcidade.Text;
+            obj.estado = cbuf.Text;
+            obj.nivel_acesso = cbnivel.Text;
+            obj.cargo = cbcargo.Text;
+
+            obj.codigo = int.Parse(txtcodigo.Text);
+
+            //Criar um objeto da classe FuncionárioDAO e chamar o metodo alterarFuncionário
+            FuncionarioDAO dao = new FuncionarioDAO();
+            dao.alterarFuncionario(obj);
+
+            //recarregar o datagridview
+            tabelaFuncionarios.DataSource = dao.listarFuncionarios();
+        }
+
         private void Btnexcluir_Click(object sender, EventArgs e)
         {
-            // 1 passo - Receber os dados dentro do objeto modelo de cliente
+            //Receber os dados dentro do objeto modelo de funcionário
             Funcionario obj = new Funcionario();
 
 
             obj.codigo = int.Parse(txtcodigo.Text);
            
 
-            //2 passo - Criar um objeto da classe ClienteDAO e chamar o metodo cadastraCliente
+            //Criar um objeto da classe FuncionarioDAO e chamar o metodo deletarFuncionário
             FuncionarioDAO dao = new FuncionarioDAO();
             dao.deletarFuncionario(obj);
 

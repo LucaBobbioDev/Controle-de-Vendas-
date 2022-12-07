@@ -278,7 +278,7 @@ namespace Projeto_Controle_Vendas.br.com.projeto.dao
                     string nivel = reader.GetString("nivel_acesso");
                     string nome = reader.GetString("nome");
 
-                    MessageBox.Show("Login efetuado com sucesso! - Cargo:" + nivel);
+                    MessageBox.Show("Login efetuado com sucesso! - Cargo: " + nivel);
 
                     Frmmenu telaMenu = new Frmmenu();
 
@@ -288,7 +288,7 @@ namespace Projeto_Controle_Vendas.br.com.projeto.dao
                     {
                         telaMenu.Show();
                     }
-                    else if (nivel.Equals("Vendedor"))
+                    else if (nivel.Equals("Usuário"))
                     {
                         telaMenu.menuProdutos.Visible = false;
                         telaMenu.Show();
